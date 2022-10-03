@@ -52,9 +52,9 @@
 // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &kp ESC   &kp INS  &trans &trans   &trans   &trnas      &kp PAGE_UP   &kp HOME &kp UP   &kp END   &kp INSERT &kp BSPC
+   &kp ESC   &kp INS  &trans &trans   &trans   &trans      &kp PAGE_UP   &kp HOME &kp UP   &kp END   &kp INSERT &kp BSPC
    &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp PAGE_DOWN &kp LEFT &kp DOWN &kp RIGHT &kp DELETE &kp GRAVE
-   &kp LSHFT &trans   &trans &trans   &trans   &trans      &trans        &tras &trans   &trans    &trans   &trans
+   &kp LSHFT &trans   &trans &trans   &trans   &trans      &trans        &trans   &trans   &trans    &trans   &trans
                     	     &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
                         >;
                 };
