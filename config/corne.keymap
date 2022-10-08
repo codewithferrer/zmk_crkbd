@@ -17,7 +17,7 @@
 #define NUMPAD  4
 
 /* MACROS */
-define ES_NTIL SEMI
+#define ES_NTIL SEMI
 
 / {
         keymap {
