@@ -22,6 +22,21 @@
 #define ES_LT NON_US_BSLH
 
 / {
+        
+        macros {
+              euro_kp: euro_kp {
+                label = "ZM_EURO_KP";
+                compatible = "zmk,behaviour-macro";
+                #binding-cells = <0>;
+                bindings
+                        = <&macro_press &kp LSHFT>
+                        , <&macro_tap &kp Z &kp M &kp K>
+                        , <&macro_release &kp LSHFT>
+                        ;
+              };
+        };
+        
+        
         keymap {
                 compatible = "zmk,keymap";
 
@@ -45,7 +60,7 @@
 // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &kp ESC    &kp EXCL  &kp AT       &kp DLLR  &kp ES_LT   &kp GT         &kp SQT   &kp DQT   &kp UNDER     &kp CARET &kp QUESTION &kp BSPC
+   &kp ESC    &kp EXCL  &kp AT       &euro_kp  &kp ES_LT   &kp GT         &kp SQT   &kp DQT   &kp UNDER     &kp CARET &kp QUESTION &kp BSPC
    &kp LCTRL  &kp EXCL  &kp QUESTION &kp HASH  &kp DLLR &kp PERCENT    &kp SLASH &kp STAR  &kp AMPS      &kp LPAR  &kp RPAR     &kp PIPE
    &kp LSHFT  &kp EQUAL &kp MINUS    &kp PLUS  &kp LBRC &kp RBRC       &kp LBKT  &kp RBKT  &kp SEMICOLON &kp COLON &kp BSLH     &kp RSHFT
                         &kp LGUI     &trans       &kp SPACE            &kp RET  &mo ADJUST   &kp RALT
