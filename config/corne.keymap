@@ -8,11 +8,16 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+/* LAYERS */
+
 #define DEFAULT 0
 #define LOWER   1
 #define RAISE   2
 #define ADJUST  3
 #define NUMPAD  4
+
+/* MACROS */
+
 
 / {
         keymap {
@@ -26,7 +31,7 @@
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
    &lt NUMPAD TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-   &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
+   &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp ES_NTIL &kp SQT
    &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
                   &kp LGUI &mo LOWER &kp SPACE   &kp RET &mo RAISE &kp RALT
                         >;
