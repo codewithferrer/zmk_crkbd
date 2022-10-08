@@ -74,7 +74,7 @@
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
    &kp ESC   &kp INS  &trans &trans   &trans   &trans      &kp PAGE_UP   &kp HOME &kp UP   &kp END   &kp INSERT &kp BSPC
-   &kp LCTRL &bt BT_CLR  &bt BT_SEL_0 &bt BT_SEL_1 &bt BT_SEL_2 &bt BT_SEL_3 &kp PAGE_DOWN &kp LEFT &kp DOWN &kp RIGHT &kp DELETE &kp GRAVE
+   &kp LCTRL &bt BT_CLR  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &kp PAGE_DOWN &kp LEFT &kp DOWN &kp RIGHT &kp DELETE &kp GRAVE
    &kp LSHFT &trans   &trans &trans   &trans   &trans      &trans        &trans   &trans   &trans    &trans   &trans
                     	     &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
                         >;
