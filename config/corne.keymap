@@ -22,7 +22,7 @@
 #define ES_NTIL SEMI
 #define ES_TILD SQT
 #define ES_LT RS(COMMA)
-#define ES_GT RS(DOT)
+#define ES_GT TILDE
 
 / {
         
