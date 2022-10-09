@@ -41,7 +41,7 @@
               };
 
               scrnsht: scrnsht {
-                label = "ZM_EURO_KP";
+                label = "ZM_SCREENSHOOT_KP";
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 wait-ms = <0>;
