@@ -51,7 +51,7 @@
                         , <&macro_tap &kp N4>
                         , <&macro_release &kp LALT &kp LGUI>
                         ;
-              }
+              };
         };
         
         
