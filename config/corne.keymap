@@ -27,6 +27,20 @@
 / {
         
         macros {
+             scrnsht: scrnsht {
+                label = "ZM_SCREENSHOOT_KP";
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                wait-ms = <0>;
+                tap-ms = <10>;
+                bindings
+                        = <&macro_press &kp LSHFT &kp LGUI>
+                        , <&macro_tap &kp N4>
+                        , <&macro_release &kp LSHFT &kp LGUI>
+                        ;
+              };
+
+
               euro_kp: euro_kp {
                 label = "ZM_EURO_KP";
                 compatible = "zmk,behavior-macro";
@@ -40,18 +54,7 @@
                         ;
               };
 
-              scrnsht: scrnsht {
-                label = "ZM_SCREENSHOOT_KP";
-                compatible = "zmk,behavior-macro";
-                #binding-cells = <0>;
-                wait-ms = <0>;
-                tap-ms = <10>;
-                bindings
-                        = <&macro_press &kp LALT &kp LGUI>
-                        , <&macro_tap &kp N4>
-                        , <&macro_release &kp LALT &kp LGUI>
-                        ;
-              };
+              
         };
         
         
