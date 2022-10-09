@@ -67,11 +67,25 @@
 // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  ´   |
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
+
+ /*
+ * QWERTY
+ * ,------+------+------+------+------+------|                    |------+------+------+------+------+------|
+ * |TABNUM|   Q  |   W  |   E  |   R  |   T  |                    |   Y  |   U  |   I  |   O  |   P  |BCKSPC|
+ * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
+ * | CTRL |   A  |   S  |   D  |   F  |   G  |                    |   H  |   J  |   K  |   L  |  ;:  |  '"  |
+ * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
+ * | SHFT |   Z  |   X  |   C  |   V  |   B  |                    |   N  |   M  |   ,  |   .  |   /  | ESC  |
+ * `-----------------------------------------|                    |-----------------------------------------'
+ *                    | LGUI | LOWER | Space |                    | Enter | RAISE | RALT |
+ *                    `----------------------'                    '----------------------'
+ */
+
                         bindings = <
-   &lt NUMPAD TAB   &kp Q &kp W &kp E &kp R   &kp T   &kp Y &kp U  &kp I   &kp O   &kp P    &kp BSPC
-   &kp LCTRL &kp A &kp S &kp D &kp F  &kp G   &kp H &kp J  &kp K  &kp L   &kp SEMI &kp SQT
-   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
-                  &kp LGUI &mo LOWER &kp SPACE   &kp RET &mo RAISE &kp RALT
+   &lt NUMPAD TAB   &kp Q &kp W &kp E &kp R  &kp T           &kp Y &kp U  &kp I   &kp O   &kp P    &kp BSPC
+   &kp LCTRL        &kp A &kp S &kp D &kp F  &kp G           &kp H &kp J  &kp K  &kp L   &kp SEMI &kp SQT
+   &kp LSHFT        &kp Z &kp X &kp C &kp V  &kp B           &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
+                          &kp LGUI &mo LOWER &kp SPACE      &kp RET &mo RAISE &kp RALT
                         >;
                 };
                 lower_layer {
@@ -80,6 +94,20 @@
 // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
 // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
+
+ /* LOWER
+ * ,-----------------------------------------.                    ,-----------------------------------------.
+ * |  ESC |   ¡  |   @  |   €  |   <  |   >  |                    |   '  |   "  |   _  |   ^  |   ¿  | Bspc |
+ * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
+ * | LCTR |   !  |   ?  |   #  |   $  |   %  |                    |   /  |   *  |   &  |   (  |   )  |   |  |
+ * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
+ * | Shift|  =   |  -   |  +   |   {  |   }  |                    |   [  |   ]  |   ;  |   :  |   \  | Shift|
+ * `-----------------------------------------|                    |-----------------------------------------'
+ *                    | LGUI | LOWER | Space |                    | Enter | RAISE | RAlt |
+ *                    `----------------------'                    '----------------------'
+ */
+
+
                         bindings = <
    &kp ESC    &kp EXCL  &kp AT       &euro_kp  &kp LT  &kp GT         &kp SQT   &kp DQT   &kp UNDER     &kp CARET &kp QUESTION &kp BSPC
    &kp LCTRL  &kp EXCL  &kp QUESTION &kp HASH  &kp DLLR &kp PERCENT    &kp SLASH &kp STAR  &kp AMPS      &kp LPAR  &kp RPAR     &kp PIPE
