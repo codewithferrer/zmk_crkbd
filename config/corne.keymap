@@ -82,6 +82,19 @@
                         ;
               };
 
+              es_accent_kp: es_accent_kp {
+                label = "ZM_ES_ACCENT_KP";
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                wait-ms = <0>;
+                tap-ms = <10>;
+                bindings
+                        = <&macro_press &kp LALT>
+                        , <&macro_tap &kp E>
+                        , <&macro_release &kp LALT>
+                        ;
+              };
+
               
         };
         
@@ -95,7 +108,7 @@
  * ,------+------+------+------+------+------|                    |------+------+------+------+------+------|
  * |TABNUM|   Q  |   W  |   E  |   R  |   T  |                    |   Y  |   U  |   I  |   O  |   P  |BCKSPC|
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * | CTRL |   A  |   S  |   D  |   F  |   G  |                    |   H  |   J  |   K  |   L  |  ;:  |  '"  |
+ * | CTRL |   A  |   S  |   D  |   F  |   G  |                    |   H  |   J  |   K  |   L  |  ;:  |   ´  |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  * | SHFT |   Z  |   X  |   C  |   V  |   B  |                    |   N  |   M  |   ,  |   .  |   /  | ESC  |
  * `-----------------------------------------|                    |-----------------------------------------'
@@ -104,9 +117,9 @@
  */
 
                         bindings = <
-   &lt NUMPAD TAB   &kp Q &kp W &kp E &kp R  &kp T           &kp Y &kp U  &kp I   &kp O   &kp P    &kp BSPC
-   &kp LCTRL        &kp A &kp S &kp D &kp F  &kp G           &kp H &kp J  &kp K  &kp L   &kp SEMI &kp SQT
-   &kp LSHFT        &kp Z &kp X &kp C &kp V  &kp B           &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
+   &lt NUMPAD TAB   &kp Q &kp W &kp E &kp R  &kp T           &kp Y &kp U  &kp I      &kp O    &kp P     &kp BSPC
+   &kp LCTRL        &kp A &kp S &kp D &kp F  &kp G           &kp H &kp J  &kp K      &kp L    &kp SEMI  &es_accent_kp
+   &kp LSHFT        &kp Z &kp X &kp C &kp V  &kp B           &kp N &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
                           &kp LGUI &mo LOWER &kp SPACE      &kp RET &mo RAISE &kp RALT
                         >;
                 };
