@@ -12,6 +12,14 @@
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/led/led.h>
 
+/*
+ * Temporarily here because nice nano v2 spi is not defined on ZMk Yet
+ * Source: https://github.com/zmkfirmware/zmk/blob/main/app/boards/shields/reviung41/boards/nice_nano.overlay
+ * GitHub Issue: https://github.com/zmkfirmware/zmk/issues/885
+ */
+
+#include <../boards/shields/corne/boards/nice_nano.overlay>
+
 // Overwrite number of leds on the keyboard. A Corne has 27 per side.
 &led_strip { chain-length = <27>; };
 
