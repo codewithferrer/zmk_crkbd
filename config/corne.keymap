@@ -237,19 +237,19 @@
                 adjust_layer {
 /* ADJUST
  * ,-----------------------------------------.                    ,-----------------------------------------.
- * |  ESC | INS  |      |VOLDWN| MUTE |VOLUP |                    |      |MC LFT| MOUUP|MC RGT|      |      |
+ * |  ESC | INS  |      |VOLDWN| MUTE |VOLUP |                    | SCRUP|MC LFT| MOUUP|MC RGT|      |      |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * | LCTR |UG TOG|      |      |      |      |                    |      |MOULFT|MOUDWN|MOURGH|      |      |
+ * | LCTR |UG TOG|      |      |      |      |                    |SCRDWN|MOULFT|MOUDWN|MOURGH|      |      |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * | SHFT |UG EFF|      |      |      |      |                    |      |      |      |      | QWERT|DVORAK|
+ * | SHFT |UG EFF|      |      |      |      |                    |      |SCRLFT|      |SCRRGT| QWERT|DVORAK|
  * `-----------------------------------------|                    |-----------------------------------------'
  *                    | LGUI |       | Space |                    | Enter |       | RAlt |
  *                    `----------------------'                    '----------------------'
  */
                         bindings = <
-   &kp ESC     &kp INS            &none   &kp C_VOL_DN  &kp K_MUTE  &kp C_VOL_UP        &none     &mkp LCLK       &mmv MOVE_UP     &mkp RCLK        &none     &none
-   &kp LCTRL   &rgb_ug RGB_TOG    &none   &none         &none       &none               &none     &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_RIGHT  &none     &none
-   &kp LSHFT   &rgb_ug RGB_EFF    &none   &none         &none       &none               &none     &none           &none            &none      &to DEFAULT &to DVORAK
+   &kp ESC     &kp INS            &none   &kp C_VOL_DN  &kp K_MUTE  &kp C_VOL_UP        &msc SCRL_UP     &mkp LCLK       &mmv MOVE_UP     &mkp RCLK        &none     &none
+   &kp LCTRL   &rgb_ug RGB_TOG    &none   &none         &none       &none               &msc SCRL_DOWN   &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_RIGHT  &none     &none
+   &kp LSHFT   &rgb_ug RGB_EFF    &none   &none         &none       &none               &none            &msc SCRL_LEFT  &none            &msc SCRL_RIGHT     &to DEFAULT &to DVORAK
                                         &kp LGUI    &trans   &kp SPACE                     &kp RET   &trans    &kp RALT
                         >;
                 };
