@@ -6,9 +6,6 @@
     chosen {
         // Asigna la tira de LEDs para la matriz RGB por tecla
         zmk,rgb-matrix = &led_strip;
-
-        // Asigna la tira de LEDs para la iluminación underglow
-        zmk,underglow = &led_strip;
     };
 };
 
