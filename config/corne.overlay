@@ -1,43 +1,49 @@
-// Ejemplo de configuración en el .overlay
-&spi3 {
+#include <dt-bindings/zmk/matrix.h>
+#include <dt-bindings/zmk/rgb.h>
+#include "corne.dtsi"
+
+/ {
+    chosen {
+        // Asigna la tira de LEDs para la matriz RGB por tecla
+        zmk,rgb-matrix = &led_strip;
+
+        // Asigna la tira de LEDs para la iluminación underglow
+        zmk,underglow = &led_strip;
+    };
+};
+
+&i2c0 {
+    status = "okay";
+};
+
+// Define la tira de LEDs RGB
+// La configuración WS2812 es la más común para los LEDs de teclados
+&spi3 { // <-- Elige el nodo SPI correcto para tu placa (e.g., Nice!Nano V2 usa spi3)
     compatible = "worldsemi,ws2812-spi";
     reg = <0>;
     spi-max-frequency = <4000000>;
 
-    // La 'chain-length' debe ser el número TOTAL de LEDs de per-key.
-    // Una Corne estándar tiene 42 teclas, por lo que serían 42 LEDs por tecla.
-    // Si además tienes underglow, tendrías que sumarlos o definir dos tiras LED
-    // por separado, pero para un setup simple, sumas el total.
-    chain-length = <42>;
-    color-mapping = <LED_COLOR_ID_GREEN LED_COLOR_ID_RED LED_COLOR_ID_BLUE>;
-
-    led-map {
-        // Aquí defines el orden de los LEDs en tu matriz.
-        // Los números se refieren al índice del LED, y los nombres a su posición física.
-        // Es fundamental que este orden sea el correcto para tu PCB específica.
-        // El formato es: <número_LED_1 número_LED_2 ...>
-        // Si hay una fila de 10 teclas, tendrías un array de 10 LEDs.
-        // Este es solo un ejemplo conceptual:
+    led_strip: led_strip {
+        // ¡IMPORTANTE! 'chain-length' es el número total de LEDs en tu mitad.
+        // Si tienes 42 LEDs por tecla y 10 para underglow, el total sería 52.
+        // Si solo tienes per-key, el valor sería 42. Si solo tienes underglow, sería 10.
         chain-length = <42>;
+        color-mapping = <LED_COLOR_ID_GREEN LED_COLOR_ID_RED LED_COLOR_ID_BLUE>;
+
+        // Aquí se define el mapeo del orden de los LEDs
+        // Esto le dice a ZMK qué LED corresponde a cada tecla en la matriz.
+        // Los números del 0 al 41 corresponden a las 42 teclas de la Corne.
         led-map = <
-             // Fila 0
-             0  1  2  3  4  5  // Mitad izquierda
-             6  7  8  9 10 11  // Mitad derecha
-             // Fila 1
-            12 13 14 15 16 17
-            18 19 20 21 22 23
-            // Y así sucesivamente...
-            24 25 26 27 28 29
-            30 31 32 33 34 35
-
-            36 37 38 
-            39 40 41
+            // Fila 0 (dedo meñique a pulgar)
+            10 9 8 7 6 5
+            // Fila 1
+            11 12 13 14 15 16
+            // Fila 2
+            41 40 39 38 37 36
+            // Fila 3 (dedos de los pulgares)
+            17 18 19 20 21
+            // Fila de pulgar (en la mitad izquierda)
+            0 1 2 3 4
         >;
-    };
-};
-
-/ {
-    chosen {
-        zmk,rgb-matrix = &led_strip; // Elige la tira de LEDs para la matriz RGB
     };
 };

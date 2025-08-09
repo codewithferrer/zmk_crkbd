@@ -268,10 +268,10 @@
  */
 
                         bindings = <
-   &trans    &trans               &bt BT_SEL 0             &bt BT_SEL 1              &bt BT_SEL 2   &bt BT_SEL 3                        &kp N1 &kp N2 &kp N3 &kp CARET &kp STAR  &kp BSPC
-   &kp LCTRL &rgb_matrix_toggle   &rgb_matrix_hsv_inc_hue  &rgb_matrix_hsv_dec_hue   &rgb_matrix_bri_inc   &rgb_matrix_hsv_inc_val      &kp N4 &kp N5 &kp N6 &kp MINUS &kp EQUAL &kp PIPE
-   &kp LSHFT &rgb_matrix_next      &rgb_matrix_hsv_inc_sat  &rgb_matrix_hsv_dec_sat   &trans   &rgb_matrix_hsv_dec_val                  &kp N7 &kp N8 &kp N9 &kp PLUS  &kp SLASH &kp DOT
-                    	     &kp LGUI &trans   &kp SPACE                                                                                 &kp RET   &kp N0    &kp RALT
+   &trans    &trans   &bt BT_SEL 0 &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3      &kp N1 &kp N2 &kp N3 &kp CARET &kp STAR  &kp BSPC
+   &kp LCTRL &trans   &trans &trans   &trans   &trans                          &kp N4 &kp N5 &kp N6 &kp MINUS &kp EQUAL &kp PIPE
+   &kp LSHFT &trans   &trans &trans   &trans   &trans                              &kp N7 &kp N8 &kp N9 &kp PLUS  &kp SLASH &kp DOT
+                    	     &kp LGUI &trans   &kp SPACE                           &kp RET   &kp N0    &kp RALT
                         >;
                 };
         };
